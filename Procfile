@@ -1,1 +1,1 @@
-web: gunicorn main:app --log-file -
+web: gunicorn B1805916_VuongCamThanh_app:app --log-file -

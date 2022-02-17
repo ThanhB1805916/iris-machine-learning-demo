@@ -1,6 +1,6 @@
 from os import sep
 from flask import Flask, render_template, request
-from iris_prediction import tree_predict
+from B1805916_VuongCamThanh_train import tree_predict
 app = Flask(__name__)
 
 
