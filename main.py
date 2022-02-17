@@ -32,7 +32,8 @@ def predict_data():
     # Predict
     result = tree_predict(data)
 
-    return result
+    # Return result
+    return render_template("result.html", params={"data": data, "result": result})
 
 
 if __name__ == "__main__":

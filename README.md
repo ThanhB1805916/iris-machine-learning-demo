@@ -10,5 +10,8 @@ Deploy heroku:
 - File requirement: pip freeze > requirements.txt
 - File Procfile
 
-Website: https://iris-machine-learning-demo.herokuapp.com/ 
+Machine learning:
 
+- sklearn: pip install sklearn
+
+Website: https://iris-machine-learning-demo.herokuapp.com/

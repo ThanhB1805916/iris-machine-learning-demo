@@ -15,7 +15,7 @@ def tree_predict(data=[]):
     model.fit(X_train, y_train)
 
     df = pd.DataFrame(data=[data], columns=[
-                      "sepal.length", "sepal.width",	"petal.length",	"petal.width"])
+                      "sepal.length", "sepal.width", "petal.length", "petal.width"])
     y_pred = model.predict(df)
 
     return y_pred[0]
