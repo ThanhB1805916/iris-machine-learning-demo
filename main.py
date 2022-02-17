@@ -1,8 +1,6 @@
-# Tham khảo tạo web: https://www.freecodecamp.org/news/how-to-build-a-web-application-using-flask-and-deploy-it-to-the-cloud-3551c985e492/
-
-
+from os import sep
 from flask import Flask, render_template, request
-
+from iris_prediction import tree_predict
 app = Flask(__name__)
 
 
@@ -29,12 +27,12 @@ def predict_data():
     pet_len = float(pet_len)
     pet_wid = float(pet_wid)
 
-    return {
-        "sep_len": sep_len,
-        "sep_wid": sep_wid,
-        "pet_len": pet_len,
-        "pet_wid": pet_wid
-    }
+    data = [sep_len, sep_wid, pet_len, pet_wid]
+
+    # Predict
+    result = tree_predict(data)
+
+    return result
 
 
 if __name__ == "__main__":
